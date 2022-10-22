@@ -1,6 +1,5 @@
 import * as jwt from 'jsonwebtoken';
 import 'dotenv';
-import { UserPayload } from '../interfaces/user';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'jwt_secret';
 
