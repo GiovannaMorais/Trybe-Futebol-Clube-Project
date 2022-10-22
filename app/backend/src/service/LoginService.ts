@@ -1,5 +1,4 @@
 import bcrypt = require('bcryptjs');
-// import validateToken from 'src/utils/validateToken';
 import { Login, ReturnLogin, TokenLogin } from '../interfaces/login';
 import Users from '../database/models/users';
 import generateToken from '../utils/generateToken';
@@ -24,17 +23,11 @@ class LoginService {
 
     const { id, username, role } = userFound;
     const token = generateToken({ id, username, role });
-    // console.log(' ...userFound ', { ...userFound });
     return { status: null, message: token };
   };
 
   public validate = async (token:string) => {
-    // console.log("tokemos", token);
     const data = validateToken(token);
-    console.log('data', data);
-    // console.log('user', user);
-    // const decode = await Users.findByPk(data.payload.role, { attributes: ['role'] });
-    // console.log('decode', decode);
     return data.role;
   };
 }
