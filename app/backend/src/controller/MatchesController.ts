@@ -17,7 +17,25 @@ export default class MatchesController {
     }
 
     const matches = await this.matcherService.getMatches();
-    // console.log('matches', matches);
     return res.status(200).json(matches);
+  };
+
+  public saveMatchesInProgress = async (req: Request, res: Response) => {
+    const matches = await this.matcherService
+      .saveMatchesInProgress(req.body);
+    if (matches.status) {
+      return res.status(matches.status).json({ message: matches.message });
+    }
+    return res.status(201).json(matches.message);
+  };
+
+  public changeMatchesInProgress = async (req: Request, res: Response) => {
+    const { id } = req.params;
+    const matches = await this.matcherService
+      .changeMatchesInProgress(+id);
+    if (matches.status) {
+      return res.status(matches.status).json({ message: matches.message });
+    }
+    return res.status(200).json(matches.message);
   };
 }
