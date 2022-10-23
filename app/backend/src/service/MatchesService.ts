@@ -63,4 +63,9 @@ export default class MatchesService {
     await Matches.update({ inProgress: false }, { where: { id } });
     return { status: null, message: 'Finished' };
   };
+
+  public UpdateMatches = async (id:number, homeTeamGoals:number, awayTeamGoals: number) => {
+    const result = await Matches.update({ homeTeamGoals, awayTeamGoals }, { where: { id } });
+    return { status: null, message: result };
+  };
 }

@@ -38,4 +38,16 @@ export default class MatchesController {
     }
     return res.status(200).json(matches.message);
   };
+
+  public UpdateMatches = async (req: Request, res: Response) => {
+    const { id } = req.params;
+    const { homeTeamGoals, awayTeamGoals } = req.body;
+
+    const matches = await this.matcherService.UpdateMatches(+id, homeTeamGoals, awayTeamGoals);
+
+    if (matches.status) {
+      return res.status(matches.status).json({ message: matches.message });
+    }
+    return res.status(200).json(matches.message);
+  };
 }
