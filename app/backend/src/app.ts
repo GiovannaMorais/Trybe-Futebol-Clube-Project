@@ -2,6 +2,7 @@ import * as express from 'express';
 import RouteLogin from './routes/login.routes';
 import RouteTeams from './routes/teams.routes';
 import RouterMatches from './routes/matches.routes';
+import RouterLeaderboard from './routes/Leaderboard.routes';
 
 class App {
   public app: express.Express;
@@ -13,6 +14,7 @@ class App {
     this.app.use(RouteLogin);
     this.app.use(RouteTeams);
     this.app.use(RouterMatches);
+    this.app.use(RouterLeaderboard);
     // Não remover essa rota
     this.app.get('/', (req, res) => res.json({ ok: true }));
   }
@@ -30,7 +32,7 @@ class App {
   }
 
   public start(PORT: string | number):void {
-    this.app.listen(3001, () => console.log(`Running on port ${PORT}`));
+    this.app.listen(PORT, () => console.log(`Running on port ${PORT}`));
   }
 }
 
