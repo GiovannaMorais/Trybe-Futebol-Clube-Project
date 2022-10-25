@@ -1,0 +1,1 @@
+export const TeamId = { id: 2, teamName: 'corinthians' }

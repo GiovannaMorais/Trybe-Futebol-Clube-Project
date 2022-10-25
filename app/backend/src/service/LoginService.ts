@@ -9,7 +9,6 @@ class LoginService {
     const { password, email } = login;
 
     const userFound = await Users.findOne({ where: { email } });
-    console.log('userFound', userFound);
 
     if (!userFound) {
       return { status: 401, message: 'Incorrect email or password' };
