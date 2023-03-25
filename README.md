@@ -6,7 +6,7 @@ O TFC é um site informativo sobre partidas e classificações de futebol (socce
 
 
 
-## ⚠️ Instalação
+# ⚠️ Instalação
 
 Para começar com este projeto, clone o repositório e instale suas dependências:
 
@@ -16,10 +16,10 @@ Para começar com este projeto, clone o repositório e instale suas dependência
   npm install
 ```
     
-## 🎲 Executando a Aplicação
+# 🎲 Executando a Aplicação
 
 
-### 🔸 Configuração do Docker Compose
+## 🔸 Configuração do Docker Compose
 - Certifique-se de ter o docker-compose instalado na versão 1.29 ou superior. Em seguida, na raiz do projeto execute o comando:
 
 
@@ -39,7 +39,7 @@ npm run compose:up
 
 Com essa configuração, é possível garantir que os containers estarão operacionais antes de serem utilizados, o que evita erros e garante a confiabilidade do ambiente.
 
-## 📍Endpoints
+# 📍Endpoints
 
 Os seguintes endpoints estão disponíveis na API:
 
@@ -97,7 +97,7 @@ Obter informações do placar dos times como visitantes na tabela matches do ban
 Obter informações do placar dos times como mandantes na tabela matches do banco de dados.
 
 
-## 🛠 Tecnologias
+# 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
@@ -106,7 +106,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Sequelize](https://sequelize.org/)
 - [Node.js](https://nodejs.org/en/)
 - [TypeScript](https://www.typescriptlang.org/)
-## 😊 Conclusão
+
+# 😊 Conclusão
 
 Este projeto forneceu um ponto de partida para a construção de uma API para gerenciar o conteúdo  sobre partidas e classificações de futebol. Você pode continuar a construir sobre este projeto e personalizá-lo para atender às suas necessidades específicas.
 
