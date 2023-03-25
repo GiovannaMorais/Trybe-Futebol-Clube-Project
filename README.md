@@ -44,50 +44,57 @@ Com essa configuração, é possível garantir que os containers estarão operac
 Os seguintes endpoints estão disponíveis na API:
 
 
+## Login
 
 #### POST /login
 
-Endpoint para realizar o login do usuário com email e senha fornecidos.Retorna um token de acesso.
+Realizar o login do usuário com email e senha fornecidos.Retorna um token de acesso.
 
 #### GET /login/validate
 
-Endpoint para validar o token de acesso do usuário.
+Validar o token de acesso do usuário.
+
+## Teams
 
 #### GET /teams
 
-Endpoint para obter informações de todos os times na tabela teams do banco de dados.
+Obter informações de todos os times na tabela teams do banco de dados.
 
 #### GET /teams/:id
 
-Endpoint para obter informações de um time específico na tabela teams do banco de dados.
+Obter informações de um time específico na tabela teams do banco de dados.
+
+## Matches
 
 #### GET /matches
 
-Endpoint para obter informações de todas as partidas na tabela matches do banco de dados
+Obter informações de todas as partidas na tabela matches do banco de dados
 
 #### POST /matches
 
-Endpoint para criar uma nova partida na tabela matches do banco de dados.
+Criar uma nova partida na tabela matches do banco de dados.
 
 #### PATCH /matches/:id/finish
 
-Endpoint para finalizar uma partida específica na tabela matches do banco de dados.
+Finalizar uma partida específica na tabela matches do banco de dados.
 
 #### PATCH /matches/:id
 
-Endpoint para atualizar uma partida específica na tabela matches do banco de dados.
+Atualizar uma partida específica na tabela matches do banco de dados.
+
+## Leaderboard
 
 #### GET /leaderboard
 
-Endpoint para obter informações do placar geral dos times na tabela matches do banco de dados.
+Obter informações do placar geral dos times na tabela matches do banco de dados.
 
 #### GET /leaderboard/away 
 
-Endpoint para obter informações do placar dos times como visitantes na tabela matches do banco de dados.
+Obter informações do placar dos times como visitantes na tabela matches do banco de dados.
 
 #### GET /leaderboard/home
 
-Endpoint para obter informações do placar dos times como mandantes na tabela matches do banco de dados.
+Obter informações do placar dos times como mandantes na tabela matches do banco de dados.
 
 
 ## 🛠 Tecnologias
